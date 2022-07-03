@@ -1,16 +1,20 @@
-package br.com.infnet.projetofinaldois.empresaAcme;
+package br.com.infnet.projetofinaldois.empresaAcme.funcionario;
+
+import br.com.infnet.projetofinaldois.empresaAcme.funcionario.complemento.Endereco;
+import br.com.infnet.projetofinaldois.empresaAcme.funcionario.complemento.GrupoSanuineo;
 
 import java.time.Year;
 
 abstract class Funcionario {
-    public GrupoSanuineo grupoSanguineo;
     private String id;
     private String nome;
     private String sobrenome;
     private int anoDeInicio;
 
+    private GrupoSanuineo grupoSanguineo;
     private Endereco endereco;
 
+    //Construtores
     public Funcionario(GrupoSanuineo grupoSanguineo, Endereco endereco) {
         this.grupoSanguineo = grupoSanguineo;
         this.endereco = endereco;
@@ -21,6 +25,7 @@ abstract class Funcionario {
         this.endereco = new Endereco();
     }
 
+    //Getters e Setters
     public int getAnoDeInicio() {
         return anoDeInicio;
     }
